@@ -47,7 +47,6 @@ body {
 .apple-icon:hover {
     color: #ffffff;
 }
-
 .emi-recomm-container {
     background-color: #1a1a1a;
     padding-top: 5px;
@@ -66,6 +65,14 @@ body {
 .emi-shop-link {
     text-decoration: none;
     color: cadetblue;
+}
+
+.navigate-link {
+    text-decoration: none;
+}
+
+.navigate-link:hover {
+    text-decoration: underline;
 }
 
 .shop-underline:hover{
@@ -232,4 +239,75 @@ body {
 span:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+
+.gallery {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+img.s{
+    width:8%;
+    height: 60vh;
+}
+.slides {
+    display: flex;   
+    position: relative;
+    gap: 1vw;
+    width: 900%;
+    animation-name: slide;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+.loader-container {
+    width: 10%;
+    background-color: #ccc;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    width: 0;
+    height: 1vh;
+    background-color: #575757 ;
+    animation: load 40s infinite;
+}
+.no{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes load {
+    0%{width:0}
+    10%{width: 15%;}
+    20%{width: 39%;}
+    30%{width: 43%;}
+    40%{width: 55%;}
+    50%{width: 73%;}
+    60%{width: 84%;}
+    70%{width: 100%;}
+    80%{width: 60%;}
+    90%{width: 30%}
+    100%{width:0%}
+}
+
+@keyframes slide {
+    0%{left:0}
+    10%{left: -80%;}
+    20%{left: -160%;}
+    30%{left: -240%;}
+    40%{left: -320%;}
+    50%{left: -400%;}
+    60%{left: -480%;}
+    70%{left: -560%;}
+    80%{left: -400%;}
+    90%{left: -240%}
+    100%{left:0}
 }
